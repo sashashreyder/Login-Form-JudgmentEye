@@ -369,27 +369,27 @@
   from {
     transform: translateY(6px) rotate(-1deg);
   }
+
   to {
     transform: none;
   }
 }
 
 @keyframes shake {
-  0%,
-  100% {
+  0%, 100% {
     transform: translateX(0);
   }
   20% {
-    transform: translateX(-8px) rotate(-0.6deg);
+    transform: translateX(-6px);
   }
   40% {
-    transform: translateX(7px) rotate(0.5deg);
+    transform: translateX(6px);
   }
   60% {
-    transform: translateX(-5px);
+    transform: translateX(-4px);
   }
   80% {
-    transform: translateX(3px);
+    transform: translateX(2px);
   }
 }
 
@@ -431,6 +431,7 @@
 
 
 @media (prefers-reduced-motion: reduce) {
+
   .bubble,
   .card.shake,
   .submit,
@@ -444,5 +445,52 @@
   .demo-win:hover,
   .demo-reset:hover {
     transform: none;
+  }
+}
+
+/* Keep the desktop login card compact without shrinking its width. */
+@media (min-width: 561px) {
+  .card {
+    padding-top: 14px;
+    padding-bottom: 14px;
+  }
+
+  .eye-anchor {
+    width: min(260px, 100%);
+    margin-top: 0;
+  }
+
+  .bubble {
+    min-height: 3.6rem;
+    padding: 10px 12px;
+    margin-top: 4px;
+    margin-bottom: 8px;
+  }
+
+  .field {
+    margin-top: 8px;
+    gap: 4px;
+  }
+
+  .field input {
+    padding: 8px 12px;
+  }
+
+  .submit {
+    margin-top: 10px;
+    padding: 10px 12px;
+  }
+
+  .demo {
+    margin-top: 10px;
+    padding-top: 8px;
+  }
+
+  .demo-note {
+    margin-bottom: 5px;
+  }
+
+  .demo-actions button {
+    padding: 9px 12px;
   }
 }

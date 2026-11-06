@@ -1,0 +1,44 @@
+:root {
+  --ink: #251b28;
+  --cream: #fff7e8;
+  --yellow: #f9e84b;
+  --pink: #f071b5;
+  --lilac: #b8a1f2;
+  --display: "Arial Black", "Arial Bold", Impact, sans-serif;
+  --ui: "Trebuchet MS", "Segoe UI", sans-serif;
+  color-scheme: light;
+  font-family: var(--ui);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  color: var(--ink);
+  background: var(--cream);
+  overflow-x: hidden;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+input:-webkit-autofill {
+  -webkit-text-fill-color: var(--ink);
+  caret-color: var(--ink);
+  box-shadow: 0 0 0 1000px #fffdf8 inset;
+}

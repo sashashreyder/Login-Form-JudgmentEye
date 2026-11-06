@@ -1,0 +1,40 @@
+.eye {
+  display: block;
+  width: min(340px, 100%);
+  height: auto;
+  margin: 0 auto;
+  overflow: visible;
+  position: relative;
+  z-index: 1;
+}
+
+.outline {
+  fill: none;
+  stroke: #251b28;
+  stroke-width: 4.5;
+  stroke-linejoin: round;
+}
+
+.lid {
+  fill: #f071b5;
+}
+
+.crease {
+  fill: none;
+  stroke: #251b28;
+  stroke-width: 4.5;
+  stroke-linecap: square;
+  stroke-linejoin: round;
+}
+
+.crease.lower {
+  stroke-width: 4;
+}
+
+.brow {
+  fill: #251b28;
+}
+
+.brow.shadow {
+  fill: #f9e84b;
+}

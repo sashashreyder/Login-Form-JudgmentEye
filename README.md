@@ -2,6 +2,12 @@
 
 **A fake door with a real opinion.**
 
+### Live Demo
+
+[Try Judgment.exe](https://loginformjudgmenteye.vercel.app)
+
+No signup required. Just bring your credentials. And your dignity.
+
 Judgment.exe is a playful login screen with one illustrated eye. It watches the pointer, shuts when you reach for the password, and comments on how the attempt goes. After three wrong guesses it pretends to lock you out. The whole thing is a local UI demo for a portfolio, not a sign-in system.
 
 Nothing you type is sent to a server. The only accepted pair is a public test login shown on the page.

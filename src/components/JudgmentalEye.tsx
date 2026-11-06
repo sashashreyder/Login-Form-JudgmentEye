@@ -46,6 +46,9 @@ type MoodSpec = {
   influence: number;
 };
 
+// CUSTOMIZE: Each preset defines the eye's expression,
+// including eyelid position, eyebrow angle, pupil size,
+// resting gaze, and how strongly it follows the cursor.
 const MOODS: Record<EyeMood, MoodSpec> = {
   idle: { upper: 0.1, lower: 0.04, ry: 62, brow: 0, tilt: 3, pupil: 1, ix: 0, iy: 0, influence: 1 },
   watch: { upper: 0.02, lower: 0, ry: 66, brow: -1, tilt: -7, pupil: 1.08, ix: 0, iy: 0, influence: 1 },
@@ -77,6 +80,8 @@ function damp(current: number, target: number, k: number) {
   return Math.abs(target - next) < 0.0035 ? target : next;
 }
 
+// Builds the eye outline as an SVG path.
+// Changing ry makes the eye appear more open or more narrow.
 function eyePath(ry: number) {
   const cy = 124;
   const top = cy - ry;

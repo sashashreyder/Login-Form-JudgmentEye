@@ -147,7 +147,8 @@ export default function App() {
     if (settled) return;
     if (field === "email") setEmail(value);
     else setPassword(value);
-    // Hide the last hint while they fix it. The miss count stays.
+    // Clear the visible error when the user edits a field.
+    // Previous failed attempts are preserved.
     if (verdict === "empty" || verdict === "bad-email" || verdict === "wrong") setVerdict(null);
   }
 

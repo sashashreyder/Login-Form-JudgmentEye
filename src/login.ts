@@ -7,15 +7,13 @@
 export const DEMO_EMAIL = "you@again.com";
 export const DEMO_PASSWORD = "lookaway";
 
-// CUSTOMIZE: incorrect guesses allowed before the fictional lock.
-// The patience line and the "attempts left" text are built from this number.
-// Eye reactions stay a three-step story: first miss, later misses, then the lock.
-// If you set this above 3, misses 2 through the one before the lock reuse the
-// second reaction. If you set it below 3, later reactions never play, and the
-// locking miss uses the lockout eye instead of a miss line.
-// The lockout sentence in COPY.lockPrimary still says "Three attempts" unless you edit it.
+// CUSTOMIZE: Number of wrong attempts before the simulated lockout.
+// Extra attempts repeat the second reaction; lower limits skip unused reactions.
+// Update COPY.lockPrimary if you change the default of 3.
 export const MAX_FAILED_ATTEMPTS = 3;
 
+// CUSTOMIZE: Replace these messages to give the form
+// a different personality without changing its behavior.
 export const COPY = {
   idle: "Oh. It’s you again.",
   idleAlt: "Let’s pretend I don’t remember last time.",

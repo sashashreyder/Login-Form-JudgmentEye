@@ -289,7 +289,6 @@
   line-height: 1.35;
 }
 
-/* One shared label column, so every value starts on the same vertical line. */
 /* One shared label column. minmax(0, 1fr) lets a long value wrap instead of widening the card. */
 .demo dl {
   display: grid;
